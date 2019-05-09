@@ -11,18 +11,42 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("snowman.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
   }
   
+  public static void keepBlue()
+  {
+	  Picture dog = new Picture("dog.jpg");
+	  dog.explore();
+	  dog.keepBlue();
+	  dog.explore();
+  }
+  
+  public static void negate()
+  {
+	  Picture dog = new Picture("dog.jpg");
+	  dog.explore();
+	  dog.negate();
+	  dog.explore();
+  }
+  
+  public static void grayscale()
+	  {
+		  Picture dog = new Picture("dog.jpg");
+		  dog.explore();
+		  dog.grayscale();
+		  dog.explore();
+	  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("seagull.jpg");
     caterpillar.explore();
-    caterpillar.mirrorVertical();
+    caterpillar.mirrorVerticalRightToLeft();
     caterpillar.explore();
   }
   
@@ -38,7 +62,7 @@ public class PictureTester
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("dog.jpg");
     canvas.createCollage();
     canvas.explore();
   }
@@ -46,9 +70,37 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("dog.jpg");
     swan.edgeDetection(10);
     swan.explore();
+  }
+  
+  public static void testMirrorHorizontal(){
+	  Picture dog = new Picture("dog.jpg");
+	    dog.explore();
+	    dog.mirrorHorizontal();
+	    dog.explore();
+  }
+  
+  public static void testMirrorHorizontalBotToTop(){
+	  Picture dog = new Picture("dog.jpg");
+	    dog.explore();
+	    dog.mirrorHorizontalBotToTop();
+	    dog.explore();
+  }
+  
+  public static void testMirrorDiagonal(){
+	  Picture dog = new Picture("dog.jpg");
+	    dog.explore();
+	    dog.mirrorDiagonal();
+	    dog.explore();
+  }
+  
+  public static void testMirrorArms(){
+	  Picture snowman = new Picture("snowman.jpg");
+	  snowman.explore();
+	  snowman.mirrorArms();
+	  snowman.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -58,14 +110,20 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+	//testMirrorDiagonal();
+	//negate();
+	//grayscale();
+	//keepBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
+    testMirrorVertical();
+	//testMirrorHorizontal();
+	//testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
